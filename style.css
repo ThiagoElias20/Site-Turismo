@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+/* Estilos para o cabeçalho */
+header {
+  background-color: #11749f;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+header ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+header a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: x-large;
+}
+
+/*Main*/
+/* main {
+  margin: 0 100px 0 100px;
+} */
+.titulo-principal {
+  text-align: center;
+  color: #11749f;
+}
+/*Slides swiper.js irado*/
+
+.swiper {
+  width: 100%;
+  height: 50vh;
+}
+.swiper-scrollbar {
+  display: none;
+}
+.swiper-slide.slide1 {
+  background-image: url(/img/canoa.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.overlay h1 {
+  font-size: 80px;
+  margin-bottom: 0;
+}
+.overlay p {
+  font-size: 20px;
+  text-align: center;
+}
+.swiper-slide.slide2 {
+  background-image: url(/img/morrobranco.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide.slide3 {
+  background-image: url(/img/praia.jpg);
+  background-position: center;
+  background-size: cover;
+}
+:root {
+  --swiper-theme-color: #ffffff !important;
+  /*
+  --swiper-pagination-color: var(--swiper-theme-color);
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+  */
+}
+
+.veja-mais {
+  background-color: #11749f;
+  font-size: 2em;
+  padding-block-start: 0.67em;
+  padding-block-end: 0.67em;
+  text-align: center;
+}
+.veja-mais a {
+  color: #ffffff;
+}
+
+/* Nossos Serviços */
+#nossos-servicos {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#nossos-servicos h2 {
+  color: #11749f;
+  font-size: xx-large;
+}
+.nossos-servicos-item {
+  width: 30%;
+  height: fit-content;
+  min-height: 480px;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+.nossos-servicos-item img {
+  width: 100%;
+  height: 125px;
+  object-position: center;
+  object-fit: cover;
+  border-bottom: #11749f solid 5px;
+  border-radius: 10px 10px 0px 0px;
+}
+.nossos-servicos-content {
+  padding: 0px 25px 0px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 360px;
+}
+.nossos-servicos-content li:nth-child(2) {
+  margin-bottom: 0 !important;
+}
+#nossos-servicos ul {
+  list-style: none;
+  padding: 0;
+}
+#nossos-servicos li {
+  margin-bottom: 20px;
+}
+#nossos-servicos strong {
+  font-size: 1.2rem;
+}
+#nossos-servicos ul ul {
+  margin-top: 5px;
+}
+.nossos-servicos-coluna1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nossos-servicos-coluna2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nossos-servicos-coluna2 .nossos-servicos-item {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/*Quem Somos*/
+#quem-somos {
+  background-image: url(/img/fortaleza.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#quem-somos .bg {
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  justify-content: space-between;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.788);
+}
+#quem-somos .quem-somos-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+
+}
+#quem-somos .quem-somos-left img {
+  width: 200px;
+  border-radius: 500px;
+}
+#quem-somos .quem-somos-left h3 {
+  font-size: xx-large;
+}
+#quem-somos .quem-somos-left p {
+  font-size: 1vw;
+}
+#quem-somos .quem-somos-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#quem-somos .quem-somos-right iframe {
+  width: 500px;
+}
+
+/* Estilos para o FAQ */
+#FAQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+#FAQ h2 {
+  font-size: xx-large;
+  color: #11749f;
+}
+details[open] > *:not(summary) {
+  animation: details-show 150ms ease-in-out;
+}
+summary {
+  border-bottom: 1px solid #000000;
+  outline: none;
+  padding: 1rem;
+  display: block;
+  padding-left: 2.2rem;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+details {
+  width: 55vw;
+  margin-top: 5px;
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+details[open] summary {
+  color: #11749f;
+  border: 0;
+}
+details[open] p {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 32px;
+}
+summary:before {
+  content: '';
+  border-width: .4rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #11749f;
+  position: absolute;
+  top: 1.3rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: .2rem 50%;
+  transition: .25s transform ease;
+}
+
+/* Estilos para a localização */
+#local iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/*Footer*/
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+/* Para a Tabela
+#tabela h2{
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #083346;
+  padding: 30px 0;
+}
+
+#tabela .div-tabela{
+  margin: 10px 70px 70px;
+}
+
+#tabela .tabela {
+  border-radius: 5px;
+  font-size: larger;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+#tabela .tabela td, .tabela th {
+  text-align: center;
+  padding: 8px;
+}
+
+#tabela .tabela td {
+  border-right: 1px solid #f8f8f8;
+  font-size: large;
+}
+
+#tabela .tabela thead th {
+  color: #ffffff;
+  background: #11749f;
+}
+
+
+#tabela .tabela thead th:nth-child(odd) {
+  color: #11749f;
+  background: rgb(255, 255, 255);
+}
+
+#tabela .tabela tr:nth-child(even) {
+  background: #c5e3f0;
+} */
