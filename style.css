@@ -14,34 +14,76 @@ header {
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 0 20px 0;
+  transition: 0.6s;
 }
+/* Estilos para o menu */
 header ul {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
   justify-content: center;
+  transition: 0.6s;
 }
 header ul li {
   padding-left: 10px;
   padding-right: 10px;
+  transition: 0.6s;
 }
 header a {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: x-large;
+  transition: 0.6s;
+}
+header a.active {
+  color: #fff;
+}
+header a.menu-item {
+  position: relative;
+}
+header a.menu-item:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.3s ease;
+}
+header a.menu-item:hover:after,
+header a.menu-item.active:after {
+  transform: translateX(-50%) scale(1);
+}
+header.menu-preso {
+  background-color: #1792c7;
+  position: fixed;
+  height: 80px;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.6s;
+  padding: 0;
+}
+header.menu-preso img {
+  width: 7vw;
+  transition: 0.6s;
+}
+header.menu-preso a {
+  font-size: 1vw;
+  transition: 0.6s;
 }
 
-/*Main*/
-/* main {
-  margin: 0 100px 0 100px;
-} */
 .titulo-principal {
   text-align: center;
   color: #11749f;
 }
-/*Slides swiper.js irado*/
 
+/*Slides swiper.js */
 .swiper {
   width: 100%;
   height: 50vh;
@@ -84,17 +126,6 @@ header a {
 }
 :root {
   --swiper-theme-color: #ffffff !important;
-  /*
-  --swiper-pagination-color: var(--swiper-theme-color);
-  --swiper-pagination-bullet-size: 8px;
-  --swiper-pagination-bullet-width: 8px;
-  --swiper-pagination-bullet-height: 8px;
-  --swiper-pagination-bullet-inactive-color: #000;
-  --swiper-pagination-bullet-inactive-opacity: 0.2;
-  --swiper-pagination-bullet-opacity: 1;
-  --swiper-pagination-bullet-horizontal-gap: 4px;
-  --swiper-pagination-bullet-vertical-gap: 6px;
-  */
 }
 
 .veja-mais {
@@ -301,7 +332,6 @@ summary:before {
   align-items: center;
   flex-direction: column;
 }
-
 .social-icon,
 .menu {
   position: relative;
@@ -311,12 +341,10 @@ summary:before {
   margin: 10px 0;
   flex-wrap: wrap;
 }
-
 .social-icon__item,
 .menu__item {
   list-style: none;
 }
-
 .social-icon__link {
   font-size: 2rem;
   color: #fff;
@@ -327,7 +355,9 @@ summary:before {
 .social-icon__link:hover {
   transform: translateY(-10px);
 }
-
+.footer .social-icon, .footer .menu {
+  padding: 0;
+}
 .menu__link {
   font-size: 1.2rem;
   color: #fff;
@@ -338,18 +368,15 @@ summary:before {
   opacity: 0.75;
   font-weight: 300;
 }
-
 .menu__link:hover {
   opacity: 1;
 }
-
 .footer p {
   color: #fff;
   margin: 15px 0 10px 0;
   font-size: 1rem;
   font-weight: 300;
 }
-
 .wave {
   position: absolute;
   top: -100px;
@@ -359,35 +386,30 @@ summary:before {
   background: url("https://i.ibb.co/wQZVxxk/wave.png");
   background-size: 1000px 100px;
 }
-
 .wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
   animation: animateWaves 4s linear infinite;
 }
-
 .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
   animation: animate 4s linear infinite !important;
 }
-
 .wave#wave3 {
   z-index: 1000;
   opacity: 0.2;
   bottom: 15px;
   animation: animateWaves 3s linear infinite;
 }
-
 .wave#wave4 {
   z-index: 999;
   opacity: 0.7;
   bottom: 20px;
   animation: animate 3s linear infinite;
 }
-
 @keyframes animateWaves {
   0% {
     background-position-x: 1000px;
@@ -396,7 +418,6 @@ summary:before {
     background-positon-x: 0px;
   }
 }
-
 @keyframes animate {
   0% {
     background-position-x: -1000px;
@@ -405,54 +426,4 @@ summary:before {
     background-positon-x: 0px;
   }
 }
-
-/* Para a Tabela
-#tabela h2{
-  text-align: center;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #083346;
-  padding: 30px 0;
-}
-
-#tabela .div-tabela{
-  margin: 10px 70px 70px;
-}
-
-#tabela .tabela {
-  border-radius: 5px;
-  font-size: larger;
-  font-weight: normal;
-  border: none;
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
-  background-color: white;
-}
-
-#tabela .tabela td, .tabela th {
-  text-align: center;
-  padding: 8px;
-}
-
-#tabela .tabela td {
-  border-right: 1px solid #f8f8f8;
-  font-size: large;
-}
-
-#tabela .tabela thead th {
-  color: #ffffff;
-  background: #11749f;
-}
-
-
-#tabela .tabela thead th:nth-child(odd) {
-  color: #11749f;
-  background: rgb(255, 255, 255);
-}
-
-#tabela .tabela tr:nth-child(even) {
-  background: #c5e3f0;
-} */
+  

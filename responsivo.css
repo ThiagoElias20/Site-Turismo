@@ -1,4 +1,10 @@
 @media (max-width: 1330px) {
+  header.menu-preso img {
+    width: 8vw;
+  }
+  header.menu-preso a {
+    font-size: 1.5vw;
+  }
   #nossos-servicos {
     margin-left: 15%;
     margin-right: 15%;
@@ -29,7 +35,9 @@
   }
 }
 @media (max-width: 900px) {
-
+  header.menu-preso {
+    position: absolute; /*Acaba com o sticky menu*/
+  }
   header img {
     width: 20vw;
   }
@@ -128,7 +136,17 @@ header img {
   height: 50vw;
 }
 
+#FAQ h2 {
+  font-size: 7vw;
+}
 details {
   width: 90%;
+}
+
+.footer .menu__link {
+  font-size: 4vw;
+}
+.footer p {
+  font-size: 3vw;
 }
 }
